@@ -2,6 +2,8 @@ package com.qimh.springbootredis;
 
 public class MainTest {
 
+
+
     public static void main(String[] args) {
         A.methodA();
         System.out.println("main..");
