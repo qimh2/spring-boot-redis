@@ -30,5 +30,3 @@ build/
 ### VS Code ###
 .vscode/
 
-### test ###
-test-ignore
