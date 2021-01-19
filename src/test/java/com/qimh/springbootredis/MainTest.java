@@ -1,6 +1,7 @@
 package com.qimh.springbootredis;
 
-import com.qimh.springbootredis.common.ChanelEnum;
+import com.alibaba.fastjson.JSONArray;
+import com.qimh.springbootredis.domain.Emp;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -9,6 +10,22 @@ import java.util.List;
 public class MainTest {
 
     public static void main(String[] args) {
+
+        JSONArray jsonArray = new JSONArray();
+        jsonArray.add(new Emp(1,"张三","男"));
+        jsonArray.add(new Emp(2,"李四","男"));
+        jsonArray.add(new Emp(3,"王五","男"));
+
+        JSONArray tmp = new JSONArray();
+        for (int i = 0; i < jsonArray.size(); i++) {
+            if (i == 0 || i == 1){
+                tmp.add(jsonArray.get(i));
+            }
+
+        }
+        jsonArray.removeAll(tmp);
+
+        System.out.println("jsonArray" + jsonArray);
 
 //        System.out.println(ChanelEnum.valueOf("baidu"));
 //
