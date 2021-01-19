@@ -7,7 +7,18 @@ public class Emp implements Serializable{
 	private Integer id;
 	private String name;
 	private String gender;
-	public Integer getId() {
+
+
+    public Emp() {
+    }
+
+    public Emp(Integer id, String name, String gender) {
+        this.id = id;
+        this.name = name;
+        this.gender = gender;
+    }
+
+    public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
